@@ -3,8 +3,8 @@
 # # # for element in kolekcja:
 # # #     for element2 in kolekcja2: ctrl + /
 
-# # def funkcja():
-# #     print("Ala")
+def funkcja():
+    print("Ala")
 # #     a=5
 # #     imie = "Zbyszek"
 
