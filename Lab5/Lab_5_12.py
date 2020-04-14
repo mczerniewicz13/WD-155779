@@ -1,0 +1,7 @@
+plik = open("m.txt","r")
+miesiac = plik.readline(x for x in range(1,12,1))
+print(miesiac)
+print(next(miesiac))
+print(next(miesiac))
+print(next(miesiac))
+plik.close()
