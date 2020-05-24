@@ -3,20 +3,23 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 fig = plt.figure()
-ax = fig.gca(projection = '3d')
+ax = fig.add_subplot( 121 , projection = '3d' )
 x=np.random.rand(20)
 y=np.random.rand(20)
-z=np.tan(x)
-ax.scatter(x,y,z,marker='o',c='red')
+z=x+y
+ax.scatter(x,y,z,marker='o',c='red',label='z=x+y')
+ax.set_xlabel( 'X' )
+ax.set_ylabel( 'Y' )
+ax.set_zlabel( 'Z' )
+plt.legend()
 
+ax=fig.add_subplot(122, projection = '3d')
 a=np.random.rand(5)
 b=np.random.rand(5)
-d=np.sin(a)
-ax.plot(a,b,d,c='g')
-
-ax.set_facecolor('black')
-fig.patch.set_facecolor('black')
-plt.axis('off')
-ax.grid(False)
-
+d=a+b
+ax.plot(a,b,d, label='d=a+b')
+ax.set_xlabel( 'A' )
+ax.set_ylabel( 'B' )
+ax.set_zlabel( 'D' )
+plt.legend()
 plt.show()
